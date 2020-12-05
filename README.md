@@ -14,18 +14,18 @@ Use of this starter template assumes that you have a 'complete dev environment' 
 - Various VS Code 'settings' and 'extensions.' Look in the bottom right when you open this up in VS Code to install them.
 - For 'nice' fonts, I recommend using [Victor Mono](https://rubjo.github.io/victor-mono/).
 - [Kite 🪁](https://www.kite.com/javascript/) is also included. I personally recommend it, but it's certainly not compulsory to set this up.
+- [Parcel Bundler](https://github.com/parcel-bundler/parcel)
 - Probably some other stuff I'm 4getting about for now 🤷🏽‍♂️
 
 ## How To Use
 
 Run `npm i` to get all the things installed.
 
-`npm run serve` will 🔥 up an instance of [`browser-sync`](https://browsersync.io/). You just write your front-end code and watch things update on your 'local web server.' 🦄
-
-Meanwhile, you will get alerted whenever there is something 'bad' in your code based on the aforementioned 👆🏽 linting. 🦄
+`npm run start` will 🔥 up `parcel index.html`. Go to 'index.js' and get that work! You'll probably want to start writing 'components.'📁
 
 ## 🎶
 
+- I've included some other directories to encourage _modularity._ Add/remove as you see fit.
 - For fonts, I set ['Victor Mono'](https://rubjo.github.io/victor-mono/) by default. You might also install: ['Inconsolata'](https://fonts.google.com/specimen/Inconsolata) or ['Source Code Pro'](https://fonts.google.com/specimen/Source+Code+Pro) - or completely change that in [.vscode/settings.json](/.vscode/settings.json), _if you know what you are doing! ⚠️_
 - As you get more comfortable, of course you can modify all the things as you C fit.
 - One of the included VS Code Extensions allows us to easily alphabetize some parts of our code; for instance, CSS 💄 rules. Just highlight the appropriate block of rules and press 'F9.' See more deets [here.](https://marketplace.visualstudio.com/items?itemName=Tyriar.sort-lines)
