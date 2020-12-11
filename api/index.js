@@ -1,5 +1,14 @@
-/**
- * TODO: All interactions with external data should be managed from here.
- * You probably need to 'import' stuff from 'db' if using a database.
- * Then you can create methods such as 'index,' 'create(payload),' etc.
- */
+import db from "./db";
+
+export default {
+  async index() {
+    const querySnapshot = await db.collection("bloodsugars").get();
+
+    return querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data()}));
+  },
+
+  async create(sugarLevel) {
+    return db.collection("bloodsugars").add(sugarLevel);
+  },
+
+};
