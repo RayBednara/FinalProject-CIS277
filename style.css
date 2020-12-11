@@ -25,6 +25,7 @@ main {
 }
 
 p {
+  text-align: center;
   font-size: 3em;
   margin: 0;
 }
@@ -44,6 +45,7 @@ td:nth-child(3) {
 }
 
 button {
+  align-items: center;
   background: #a5d6a7;
   border: whitesmoke;
 
@@ -78,7 +80,7 @@ label {
   top: -9999px;
 }
 
-tbody {
+main {
   --inRange: green;
   --highLvl: orange;
   --lowLvl: red;
@@ -88,14 +90,24 @@ tbody {
   background-color: var(--inRange);
 }
 
-[data-grade="lowLvl"] {
+[data-level="lowLvl"] {
   background-color: var(--lowLvl);
 }
 
-[data-grade="highLvl"] {
+[data-level="highLvl"] {
   background-color: var(--highLvl);
 }
 
+#comment {
+  height: 5rem;
+  width: 65%;
+  padding: 5px;
+}
+
+#sugarLevel {
+  width: 30%;
+  padding: 5px;
+}
 
 .is-hidden {
   display: none;
