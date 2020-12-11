@@ -1,16 +1,22 @@
-/**
- * TODO: Import some components
- * U might also need to import 'api' to get your initial data?
- */
-import testComponent from "./components";
+import { Main } from "./components";
+import api from "./api";
+import formHandler from "./lib";
+import store from "./store"
 
 const root = document.getElementById("root");
 
 const render = () => {
-  root.innerHTML = testComponent();
+  root.innerHTML = Main();
+  formHandler()
+    .then(()=>{
+      render();
+    })
+    .catch((error)=>{
+      console.error(error.msg);
+    });
 };
 
-// ⚠️ Don't 4get to actually render! 😆
-render();
-
-// TODO: Use api to 'fetch' 'initial data?' Maybe 'api.index()'?
+api.index().then((sugarLevelData) => {
+  store.setData(sugarLevelData);
+  render();
+});
