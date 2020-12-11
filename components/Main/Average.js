@@ -19,4 +19,4 @@ const calcAvg = (sugarsData) =>
     return ret;
   }, 0) / sugarsData.length;
 
-export default () => `<p id="avg" data-level=${assignLevelRating(calcAvg(store.data))}>${calcAvg(store.data).toFixed(1)}</p>`;
+export default () => `<p id="avg" data-level=${assignLevelRating(calcAvg(store.data))}>Average blood sugar is:<br> ${calcAvg(store.data).toFixed(1)}</p>`;

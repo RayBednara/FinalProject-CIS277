@@ -6,15 +6,14 @@ export default () => `<form>
       id="sugarLevel"
       placeholder="Sugar Level #"
       name="sugarLevel"
+      min="0"
       required />
   </span>
   <span>
     <label for="comment">Comments</label>
     <input
-      type="number"
+      type="text"
       id="comment"
-      min="0"
-      max="100"
       placeholder="Comments"
       name="comment"
       required

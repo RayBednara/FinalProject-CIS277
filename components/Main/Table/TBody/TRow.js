@@ -1,19 +1,18 @@
-const assignGrade = (sugarLevel) => {
-  if (sugarLevel >= 70 || sugarLevel <120) {
+const assignLevelRating = (sugarLevel) => {
+  if (sugarLevel >= 70 && sugarLevel <120) {
     return "inRange";
   }
-  elsif (sugarLevel >= 120) {
+  if (sugarLevel >= 120) {
     return "highLvl";
   }
   if (sugarLevel <70) {
     return "lowLvl";
   }
+}
 
-  }
-};
 
 export default ({ sugarLevel, comment }) => `
-  <tr data-grade=${assignGrade(score)}>
+  <tr data-level=${assignLevelRating(sugarLevel)}>
     <td>${sugarLevel}</td>
     <td>${comment}</td>
   </tr>
